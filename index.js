@@ -1,3 +1,4 @@
+// this event listener fetches data from localstorage on page load
 document.addEventListener("DOMContentLoaded", function () {
   const ul = document.getElementById("expense-list");
   for (let i = 0; i < localStorage.length; i++) {
