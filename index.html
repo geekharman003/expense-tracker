@@ -5,10 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expense Tracker</title>
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+     <style>
+        #expense-form ,ul{
+            width: 90%;
+        }
+
+        label,#add-expense-btn {
+            margin-top: 1rem;
+        }
+
+        @media screen and (min-width: 768px) {
+            #expense-form,ul {
+                width: 500px;
+            }
+        }
+     </style>
 </head>
 <body>
-    <h2>expense tracker</h2>
-    <form id="expense-form" onsubmit="handleSubmit(event)">
+    <form id="expense-form" class="d-flex flex-column mt-0 mb-0 ms-auto me-auto" onsubmit="handleSubmit(event)">
+        <h2 class="text-center">EXPENSE TRACKER</h2>
         <label for="expense-amount">Choose expense amount:</label>
         <input required min="1" type="number" id="expense-amount" name="expense-amount">
         <br>
@@ -28,7 +43,7 @@
         <button id="add-expense-btn">Add Expense</button>
     </form>
 
-    <ul id="expense-list">
+    <ul id="expense-list" class="d-flex flex-column mt-3 mb-0 ms-auto me-auto">
         <!-- <li>1000 dsdsdss fuel <button>delete</button> <button>edit</button></li> -->
     </ul>
     
